@@ -1,4 +1,3 @@
-# Game-of-Life
 
 ## What is Game of Life?
 
