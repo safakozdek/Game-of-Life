@@ -23,10 +23,6 @@ var (
 var (
 	empty [][]int
 
-	blockX = []int{1, 1, 2, 2}
-	blockY = []int{1, 2, 1, 2}
-	block  = [][]int{blockX, blockY}
-
 	gliderX = []int{1, 2, 3, 3, 3}
 	gliderY = []int{2, 3, 1, 2, 3}
 	glider  = [][]int{gliderX, gliderY}
@@ -38,7 +34,7 @@ var (
 	gliderGun = [][]int{gliderGunX, gliderGunY}
 
 
-	defaultScreens = [][][]int{empty, block, glider, gliderGun}
+	defaultScreens = [][][]int{empty, glider, gliderGun}
 )
 
 type Game struct {
@@ -111,7 +107,7 @@ func initializeGrid() {
 	if mode == 0 {
 		for x := 1; x < WIDTH-1; x++ {
 			for y := 1; y < HEIGHT-1; y++ {
-				if rand.Float32() < 0.5 {
+				if rand.Float32() <= 0.5 {
 					grid[x][y] = 1
 				}
 			}
@@ -125,7 +121,7 @@ func initializeGrid() {
 
 func main() {
 	initializeGrid()
-	ebiten.SetMaxTPS(8)
+	ebiten.SetMaxTPS(20)
 	ebiten.SetWindowSize(WIDTH*SCALE, HEIGHT*SCALE)
 	ebiten.SetWindowTitle("Game of Life")
 	if err := ebiten.RunGame(&Game{}); err != nil {
