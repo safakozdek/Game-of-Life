@@ -13,7 +13,7 @@ The universe of the Game of Life is an infinite, two-dimensional orthogonal grid
 Explanations are taken from Wikipedia and further explanation can be found [here](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
 
 
-## Modes
+## Game Modes
 
 ### 0. Random Mode (Default)
 
