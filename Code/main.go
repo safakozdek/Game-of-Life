@@ -43,6 +43,7 @@ var (
 	defaultScreens = [][][]int{empty, glider, gosperGliderGun, simkinGliderGun}
 )
 
+// Game : Game defines necessary functions for a game.
 type Game struct {
 }
 
