@@ -1,4 +1,6 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/safakozdek/Game-of-Life)](https://goreportcard.com/report/github.com/safakozdek/Game-of-Life) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/safakozdek/Game-of-Life/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/safakozdek/Game-of-Life)](https://goreportcard.com/report/github.com/safakozdek/Game-of-Life)
+[![GoDoc](https://godoc.org/github.com/safakozdek/Game-of-Life?status.svg)](http://godoc.org/github.com/safakozdek/Game-of-Life)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/safakozdek/Game-of-Life/blob/master/LICENSE)
 ## What is Game of Life?
 
 Conway's Game of Life is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. 
