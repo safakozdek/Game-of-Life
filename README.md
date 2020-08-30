@@ -11,3 +11,19 @@ The universe of the Game of Life is an infinite, two-dimensional orthogonal grid
 * Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 Explanations are taken from Wikipedia and further explanation can be found [here](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
+
+
+## Modes
+
+### 0. Random Mode (Default)
+
+Default mode for the implementation is random mode. Basically it initializes the board with randomly selected live cells. It is good for having different combinations each time you start the game. 
+
+### 1. Glider Mode
+A glider looks like the following: 
+![glider_wikipedia](https://github.com/safakozdek/Game-of-Life/blob/master/Visuals/glider_wikipedia.gif)
+
+A glider is a combination that game rules enables it to move like a living object. Basically, it is a pattern that travels across the board. Gliders are the smallest spaceships, and they travel diagonally at a speed of one cell every four generations. 
+
+This mode starts the board with a glider.   
+![glider](https://github.com/safakozdek/Game-of-Life/blob/master/Visuals/glider.gif)
