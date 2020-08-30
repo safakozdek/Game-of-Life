@@ -44,10 +44,9 @@ var (
 )
 
 type Game struct {
-	mode int
 }
 
-// Logic
+// Update : Game logic is implemented here.
 func (g *Game) Update(screen *ebiten.Image) error {
 
 	for x := 1; x < WIDTH-1; x++ {
@@ -82,7 +81,7 @@ func (g *Game) sumAdjacents(x, y int) uint8 {
 	return sum
 }
 
-// Render
+// Draw : Screen rendering is done in this method.
 func (g *Game) Draw(screen *ebiten.Image) error {
 	var err error = nil
 	if !ebiten.IsDrawingSkipped() {
@@ -102,7 +101,7 @@ func (g *Game) Draw(screen *ebiten.Image) error {
 	return err
 }
 
-// Layout
+// Layout : Borders of window determined in this method.
 func (g *Game) Layout(outsideWidth, outsideHeight int) (int, int) {
 	return outsideWidth, outsideHeight
 }
@@ -128,7 +127,7 @@ func main() {
 	ebiten.SetMaxTPS(20)
 	ebiten.SetWindowSize(WIDTH*SCALE, HEIGHT*SCALE)
 	ebiten.SetWindowTitle("Game of Life")
-	if err := ebiten.RunGame(&Game{mode: mode}); err != nil {
+	if err := ebiten.RunGame(&Game{}); err != nil {
 		log.Fatal(err)
 	}
 }
