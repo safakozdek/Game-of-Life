@@ -27,3 +27,10 @@ A glider is a combination that game rules enables it to move like a living objec
 
 This mode starts the board with a glider.   
 ![glider](https://github.com/safakozdek/Game-of-Life/blob/master/Visuals/glider.gif)
+
+### 2. Gosper Glider Gun Mode
+
+The Gosper glider gun is the first known gun, and indeed the first known finite pattern with unbounded growth, found by Bill Gosper in November 1970. It consists of two queen bee shuttles stabilized by two blocks. Its 36 cells remained the smallest size of any known gun until the discovery of the double-barreled Simkin glider gun in 2015 which overtook this record with only 29 cells.
+
+This mode starts the board with a Gosper glider gun.  
+![gliderGun](https://github.com/safakozdek/Game-of-Life/blob/master/Visuals/gliderGun.gif)
