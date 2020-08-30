@@ -7,6 +7,7 @@ import (
 	"math/rand"
 )
 
+//Constants for display settings
 const (
 	SCALE  = 8 // Scale allows using larger pixels
 	WIDTH  = 100
