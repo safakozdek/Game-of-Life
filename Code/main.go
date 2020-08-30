@@ -37,7 +37,7 @@ var (
 		30, 30, 31, 31, 31, 32, 35, 35, 36, 36}
 	simkinGliderGunY = []int{18, 19, 18, 19, 21, 22, 21, 22, 18, 19, 18, 19, 29, 28, 29, 30, 27, 30, 31,
 		27, 28, 28, 29, 30, 29, 29, 30, 29, 30}
-	simkinGliderGun  = [][]int{simkinGliderGunX, simkinGliderGunY}
+	simkinGliderGun = [][]int{simkinGliderGunX, simkinGliderGunY}
 
 	defaultScreens = [][][]int{empty, glider, gosperGliderGun, simkinGliderGun}
 )
@@ -79,27 +79,21 @@ func (g *Game) sumAdjacents(x, y int) uint8 {
 	return sum
 }
 
-func (g *Game) Render(screen *ebiten.Image) error {
+func (g *Game) Draw(screen *ebiten.Image) error {
 	var err error = nil
-	err = screen.Fill(white)
-	for x := 0; x < WIDTH; x++ {
-		for y := 0; y < HEIGHT; y++ {
-			if grid[x][y] > 0 {
-				for x1 := 0; x1 < SCALE; x1++ {
-					for y1 := 0; y1 < SCALE; y1++ {
-						screen.Set((x*SCALE)+x1, (y*SCALE)+y1, black)
+	if !ebiten.IsDrawingSkipped() {
+		err = screen.Fill(white)
+		for x := 0; x < WIDTH; x++ {
+			for y := 0; y < HEIGHT; y++ {
+				if grid[x][y] > 0 {
+					for x1 := 0; x1 < SCALE; x1++ {
+						for y1 := 0; y1 < SCALE; y1++ {
+							screen.Set((x*SCALE)+x1, (y*SCALE)+y1, black)
+						}
 					}
 				}
 			}
 		}
-	}
-	return err
-}
-
-func (g *Game) Draw(screen *ebiten.Image) error {
-	var err error = nil
-	if !ebiten.IsDrawingSkipped() {
-		err = g.Render(screen)
 	}
 	return err
 }
