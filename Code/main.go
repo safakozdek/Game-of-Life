@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	SCALE  = 8
+	SCALE  = 8 // Scale allows using larger pixels
 	WIDTH  = 100
 	HEIGHT = 100
 )
@@ -18,7 +18,7 @@ var (
 	white  = color.RGBA{R: 200, G: 200, B: 255, A: 255} //200,200,255
 	grid   = [WIDTH][HEIGHT]uint8{}
 	buffer = [WIDTH][HEIGHT]uint8{}
-	mode   = 0 //default value for random grid
+	mode   = 2 //default value for random grid
 )
 var (
 	empty [][]int
@@ -43,8 +43,10 @@ var (
 )
 
 type Game struct {
+	mode int
 }
 
+// Logic
 func (g *Game) Update(screen *ebiten.Image) error {
 
 	for x := 1; x < WIDTH-1; x++ {
@@ -79,6 +81,7 @@ func (g *Game) sumAdjacents(x, y int) uint8 {
 	return sum
 }
 
+// Render
 func (g *Game) Draw(screen *ebiten.Image) error {
 	var err error = nil
 	if !ebiten.IsDrawingSkipped() {
@@ -98,6 +101,7 @@ func (g *Game) Draw(screen *ebiten.Image) error {
 	return err
 }
 
+// Layout
 func (g *Game) Layout(outsideWidth, outsideHeight int) (int, int) {
 	return outsideWidth, outsideHeight
 }
@@ -123,7 +127,7 @@ func main() {
 	ebiten.SetMaxTPS(20)
 	ebiten.SetWindowSize(WIDTH*SCALE, HEIGHT*SCALE)
 	ebiten.SetWindowTitle("Game of Life")
-	if err := ebiten.RunGame(&Game{}); err != nil {
+	if err := ebiten.RunGame(&Game{mode: mode}); err != nil {
 		log.Fatal(err)
 	}
 }
