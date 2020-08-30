@@ -1,4 +1,4 @@
-
+[![Go Report Card](https://goreportcard.com/badge/github.com/safakozdek/Game-of-Life)](https://goreportcard.com/report/github.com/safakozdek/Game-of-Life)
 ## What is Game of Life?
 
 Conway's Game of Life is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves. 
