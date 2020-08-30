@@ -9,8 +9,8 @@ import (
 
 const (
 	SCALE  = 8
-	WIDTH  = 50
-	HEIGHT = 50
+	WIDTH  = 100
+	HEIGHT = 100
 )
 
 var (
@@ -27,14 +27,19 @@ var (
 	gliderY = []int{2, 3, 1, 2, 3}
 	glider  = [][]int{gliderX, gliderY}
 
-	gliderGunX = []int{1, 1, 2, 2, 11, 11, 11, 12, 12, 13, 13, 14, 14, 15, 16, 16, 17, 17, 17, 18,
+	gosperGliderGunX = []int{1, 1, 2, 2, 11, 11, 11, 12, 12, 13, 13, 14, 14, 15, 16, 16, 17, 17, 17, 18,
 		21, 21, 21, 22, 22, 22, 23, 23, 25, 25, 25, 25, 35, 35, 36, 36}
-	gliderGunY = []int{5, 6, 5, 6, 5, 6, 7, 4, 8, 3, 9, 3, 9, 6, 4, 8, 5, 6, 7, 6,
+	gosperGliderGunY = []int{5, 6, 5, 6, 5, 6, 7, 4, 8, 3, 9, 3, 9, 6, 4, 8, 5, 6, 7, 6,
 		3, 4, 5, 3, 4, 5, 2, 6, 1, 2, 6, 7, 3, 4, 3, 4}
-	gliderGun = [][]int{gliderGunX, gliderGunY}
+	gosperGliderGun = [][]int{gosperGliderGunX, gosperGliderGunY}
 
+	simkinGliderGunX = []int{4, 4, 5, 5, 8, 8, 9, 9, 11, 11, 12, 12, 24, 25, 25, 25, 26, 26, 26,
+		30, 30, 31, 31, 31, 32, 35, 35, 36, 36}
+	simkinGliderGunY = []int{18, 19, 18, 19, 21, 22, 21, 22, 18, 19, 18, 19, 29, 28, 29, 30, 27, 30, 31,
+		27, 28, 28, 29, 30, 29, 29, 30, 29, 30}
+	simkinGliderGun  = [][]int{simkinGliderGunX, simkinGliderGunY}
 
-	defaultScreens = [][][]int{empty, glider, gliderGun}
+	defaultScreens = [][][]int{empty, glider, gosperGliderGun, simkinGliderGun}
 )
 
 type Game struct {
