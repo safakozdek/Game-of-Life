@@ -33,4 +33,12 @@ This mode starts the board with a glider.
 The Gosper glider gun is the first known gun, and indeed the first known finite pattern with unbounded growth, found by Bill Gosper in November 1970. It consists of two queen bee shuttles stabilized by two blocks. Its 36 cells remained the smallest size of any known gun until the discovery of the double-barreled Simkin glider gun in 2015 which overtook this record with only 29 cells.
 
 This mode starts the board with a Gosper glider gun.  
-![gliderGun](https://github.com/safakozdek/Game-of-Life/blob/master/Visuals/gliderGun.gif)
+![gliderGun](https://github.com/safakozdek/Game-of-Life/blob/master/Visuals/gliderGun.gif)  
+
+
+### 3. Simkin Glider Gun Mode
+
+The Simkin Glider Gun is a glider gun found by Michael Simkin and it is the smallest known gun.  
+
+This mode starts the board with a Simkin glider gun.  
+![simkinGliderGun](https://github.com/safakozdek/Game-of-Life/blob/master/Visuals/simkinGliderGun.gif)
