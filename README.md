@@ -54,3 +54,5 @@ go get -u github.com/safakozdek/Game-of-Life
 go install github.com/safakozdek/Game-of-Life
 ```
 
+## Contributing
+Pull-requests, issues, comments and other improvements are very welcome!
