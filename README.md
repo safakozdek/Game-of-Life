@@ -44,3 +44,13 @@ The Simkin Glider Gun is a glider gun found by Michael Simkin and it is the smal
 
 This mode starts the board with a Simkin glider gun.  
 ![simkinGliderGun](https://github.com/safakozdek/Game-of-Life/blob/master/Visuals/simkinGliderGun.gif)
+
+## Install
+
+Get the source with the following commands.
+
+```
+go get -u github.com/safakozdek/Game-of-Life
+go install github.com/safakozdek/Game-of-Life
+```
+
