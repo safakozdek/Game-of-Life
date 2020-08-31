@@ -55,4 +55,4 @@ go install github.com/safakozdek/Game-of-Life
 ```
 
 ## Contributing
-Pull-requests, issues, comments and other improvements are always appreciated!
+Pull-requests, issues, comments and stars are always appreciated!
