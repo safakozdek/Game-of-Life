@@ -19,7 +19,7 @@ var (
 	white  = color.RGBA{R: 200, G: 200, B: 255, A: 255} //200,200,255
 	grid   = [WIDTH][HEIGHT]uint8{}
 	buffer = [WIDTH][HEIGHT]uint8{}
-	mode   = 2 //default value for random grid
+	mode   = 0 //default value for random grid
 )
 var (
 	empty [][]int
