@@ -54,13 +54,14 @@ go get -u github.com/safakozdek/Game-of-Life
 go install github.com/safakozdek/Game-of-Life
 ```
 ## Usage
-First, use build comment
+1. Build the code.
+
 ```
 go build game-of-life
 ```
-
+2. Run by using completely optional flags.
 <pre>
-usage: ./game-of-life [flags]
+./game-of-life [flags]
 
 Flags:
       --mode=0       Sets the game mode. Default value is 0.
