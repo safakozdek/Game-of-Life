@@ -53,6 +53,18 @@ Get the source with the following commands.
 go get -u github.com/safakozdek/Game-of-Life
 go install github.com/safakozdek/Game-of-Life
 ```
+## Usage
+First, use build comment
+```
+go build game-of-life
+```
 
+<pre>
+usage: ./game-of-life [flags]
+
+Flags:
+      --mode=0       Sets the game mode. Default value is 0.
+      --fps=20       Sets the frame per second. Default value is 10. <i>Suggested range: 6-60</i>
+</pre>
 ## Contributing
 Pull-requests, issues, comments and stars are always appreciated!
