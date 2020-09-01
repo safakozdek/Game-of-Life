@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"github.com/hajimehoshi/ebiten"
 	"image/color"
 	"log"
@@ -9,9 +10,9 @@ import (
 
 //Constants for display settings
 const (
-	SCALE  = 8 // Scale allows using larger pixels
-	WIDTH  = 100
-	HEIGHT = 100
+	SCALE  = 4 // Scale allows using larger pixels
+	WIDTH  = 150
+	HEIGHT = 150
 )
 
 var (
@@ -19,7 +20,7 @@ var (
 	white  = color.RGBA{R: 200, G: 200, B: 255, A: 255} //200,200,255
 	grid   = [WIDTH][HEIGHT]uint8{}
 	buffer = [WIDTH][HEIGHT]uint8{}
-	mode   = 0 //default value for random grid
+	mode   int
 )
 var (
 	empty [][]int
@@ -107,7 +108,7 @@ func (g *Game) Layout(outsideWidth, outsideHeight int) (int, int) {
 	return outsideWidth, outsideHeight
 }
 
-func initializeGrid() {
+func initializeGrid(mode int) {
 	if mode == 0 {
 		for x := 1; x < WIDTH-1; x++ {
 			for y := 1; y < HEIGHT-1; y++ {
@@ -124,8 +125,11 @@ func initializeGrid() {
 }
 
 func main() {
-	initializeGrid()
-	ebiten.SetMaxTPS(20)
+	fps := flag.Int("fps", 10, "FPS")
+	mode := flag.Int("mode", 0, "Mode")
+	flag.Parse()
+	initializeGrid(*mode)
+	ebiten.SetMaxTPS(*fps)
 	ebiten.SetWindowSize(WIDTH*SCALE, HEIGHT*SCALE)
 	ebiten.SetWindowTitle("Game of Life")
 	if err := ebiten.RunGame(&Game{}); err != nil {
