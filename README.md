@@ -67,5 +67,9 @@ Flags:
       --mode=0       Sets the game mode. Default value is 0.
       --fps=20       Sets the frame per second. Default value is 10. <i>Suggested range: 6-60</i>
 </pre>
+
+## Purpose
+This is my first project in Go. My aim was to getting familiar with a go project in general. That's why I have written this completely unnecessary code and readme. If you are reading this, then my job in here is done. 
+
 ## Contributing
 Pull-requests, issues, comments and stars are always appreciated!
