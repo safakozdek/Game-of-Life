@@ -108,6 +108,7 @@ func (g *Game) Layout(outsideWidth, outsideHeight int) (int, int) {
 	return outsideWidth, outsideHeight
 }
 
+// Initializer : Initializes the board with using given mode.
 func Initializer(mode int) {
 	if mode == 0 {
 		for x := 1; x < WIDTH-1; x++ {
